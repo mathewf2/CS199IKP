@@ -4,7 +4,8 @@ The purpose of this project is visualize a dataset of responses regarding the ef
 
 ### TODO:
 
-- [ ] Create and send out suvey
+- [X] Create and send out suvey
+
 - [ ] Review Kotlin data science libraries
 
 - [ ] Get a shell of a KTOR server running
