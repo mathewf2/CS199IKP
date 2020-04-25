@@ -6,9 +6,9 @@ The purpose of this project is visualize a dataset of responses regarding the ef
 
 - [X] Create and send out suvey
 
-- [ ] Review Kotlin data science libraries
+- [X] Review Kotlin data science libraries
 
-- [ ] Get a shell of a KTOR server running
+- [X] Get a shell of a KTOR server running
 
 - [ ] Process survey results into data visualization
 
