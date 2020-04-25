@@ -12,6 +12,7 @@ repositories {
     maven("https://dl.bintray.com/mipt-npm/scientifik")
     maven("https://dl.bintray.com/kotlin/kotlin-numpy")
     maven("https://jetbrains.bintray.com/lets-plot-maven")
+    jcenter()
 }
 
 dependencies {
@@ -21,6 +22,14 @@ dependencies {
     implementation("io.ktor:ktor-server-core:$ktorVersion")
     implementation("io.ktor:ktor-server-netty:$ktorVersion")
     implementation("io.ktor:ktor-gson:$ktorVersion")
+    implementation("io.ktor:ktor-freemarker:$ktorVersion")
+    implementation("io.ktor:ktor-html-builder:$ktorVersion")
+
+    val kotlinx_html_version = "0.7.1"
+    //Server Side
+    implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:${kotlinx_html_version}")
+    //Client Side
+    implementation("org.jetbrains.kotlinx:kotlinx-html-js:${kotlinx_html_version}")
 
     testImplementation("io.kotlintest:kotlintest-runner-junit5:3.3.0")
     testImplementation("io.ktor:ktor-server-test-host:$ktorVersion")
@@ -35,6 +44,8 @@ dependencies {
     val letsPlotVersion = "0.0.9-SNAPSHOT"
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     api("org.jetbrains.lets-plot:lets-plot-kotlin-api:${letsPlotVersion}")
+
+
 
 }
 
