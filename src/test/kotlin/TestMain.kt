@@ -11,7 +11,8 @@ class TestMain : StringSpec({
     "should retrieve root path properly" {
         withTestApplication(Application::data) {
             handleRequest(HttpMethod.Get, "/").apply {
-
+                response.status() shouldBe HttpStatusCode.OK
+                response.content shouldBe "OK"
             }
         }
     }
