@@ -45,6 +45,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     api("org.jetbrains.lets-plot:lets-plot-kotlin-api:${letsPlotVersion}")
 
+    implementation("com.google.api-client:google-api-client:1.30.4")
+    implementation("com.google.oauth-client:google-oauth-client-jetty:1.30.4")
+    implementation("com.google.apis:google-api-services-sheets:v4-rev581-1.25.0")
+
 
 
 }
