@@ -12,6 +12,7 @@ import io.ktor.server.netty.Netty
 import kotlinx.html.*
 
 import java.awt.SystemColor.window
+import java.net.URL
 
 
 fun Application.data() {
@@ -31,31 +32,62 @@ fun Application.data() {
                     div {
                         div("row") {
                             div("buttonGrid homeC") {
-                                a(classes = "topButtons") {
+                                a("/", classes = "topButtons") {
                                     +"Home"
                                 }
 
-                                h1(" title topButtonsspec") {
-                                    +"Kotlin Data Science Project: CS199IKP"
-                                }
-
-                                button(classes = "topButtons") {
+                                a("Data", classes = "topButtons") {
                                     +"Data"
                                 }
                             }
                         }
 
-                        div {
-//                            IFRAME("https://docs.google.com/forms/d/e/1FAIpQLScSOG770icQDBoCc0geBc9ynS8uFAlcai3gW_ih-3Yj28A8Hw/viewform?embedded=true") {
-//
-//                            }
+                        div(classes = "iframeHolder") {
+                            h1("title") {
+                                +"Kotlin Data Science Project: CS199IKP"
+                            }
+                            iframe() {
+                                src =
+                                    "https://docs.google.com/forms/d/e/1FAIpQLScSOG770icQDBoCc0geBc9ynS8uFAlcai3gW_ih-3Yj28A8Hw/viewform?embedded=true"
+                            }
                         }
                     }
                     script(type = ScriptType.textJavaScript) {
                         unsafe {
-                            raw("""
+                            raw(
+                                """
                                     function my() { return 1; }
-                                    """)
+                                    
+                                    """
+                            )
+                        }
+                    }
+                    div (classes = "footer") {
+                        h4 (classes = "credit") {
+                            +"A UIUC CS199IKP Project by Mathew Farley and Noah Rogers"
+                        }
+                    }
+                }
+            }
+        }
+        get("/Data") {
+            call.respondHtml {
+                head {
+                    link(rel = "stylesheet", href = "/static/main.css")
+                }
+
+                body {
+                    div {
+                        div("row") {
+                            div("buttonGrid homeC") {
+                                a("/", classes = "topButtons") {
+                                    +"Home"
+                                }
+
+                                a("Data", classes = "topButtons") {
+                                    +"Data"
+                                }
+                            }
                         }
                     }
                 }
