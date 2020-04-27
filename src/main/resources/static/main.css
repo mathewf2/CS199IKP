@@ -1,12 +1,15 @@
 html {
     background: #131f33;
+    margin-left: -1em;
+    margin-right: -1em;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 body {
     /*background: #C9AA88;*/
     /*background: #fa6300;*/
     background: white;
     height: 55em;
-    border: 3px #fa6300 solid;
 
 }
 
@@ -60,29 +63,31 @@ body {
 
 iframe {
     text-align: center;
-    width: 80%;
+    width: 85%;
     height: 45em;
     border: none;
 }
 
 .iframeHolder {
     text-align: center;
-    border: none;
     height: 45em;
-    width: 100%;
+    width: 101%;
     justify-content: center;
     align-items: center;
+    border-top: .4em #fa6300 ridge;
+    border-bottom: .4em #fa6300 groove;
+    padding-bottom: 5.6em;
 }
 
 .footer {
     display: flex;
     position: relative;
-    bottom: -5.0em;
+    bottom: 1.0em;
     width: 100%;
     color: white;
     white-space: nowrap;
     text-align: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .credit {

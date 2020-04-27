@@ -89,6 +89,15 @@ fun Application.data() {
                                 }
                             }
                         }
+
+                        div(classes = "iframeHolder") {
+
+                        }
+                    }
+                    div (classes = "footer") {
+                        h4 (classes = "credit") {
+                            +"A UIUC CS199IKP Project by Mathew Farley and Noah Rogers"
+                        }
                     }
                 }
             }
@@ -98,5 +107,4 @@ fun Application.data() {
 
 fun main() {
     embeddedServer(Netty, port = 8080, module = Application::data).start(wait = true)
-    Data().main()
 }
