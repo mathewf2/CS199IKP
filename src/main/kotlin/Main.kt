@@ -31,7 +31,7 @@ fun Application.data() {
                     div {
                         div("row") {
                             div("buttonGrid homeC") {
-                                button(classes = "topButtons") {
+                                a(classes = "topButtons") {
                                     +"Home"
                                 }
 
