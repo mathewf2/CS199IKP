@@ -1,5 +1,6 @@
 html {
-    background: #131f33;
+    /*background: #131f33;*/
+    background: #13294B;
     margin-left: -1em;
     margin-right: -1em;
     overflow-x: hidden;
@@ -14,7 +15,8 @@ body {
 }
 
 .buttonGrid {
-    background-color: #131f33;
+    /*background-color: #131f33;*/
+    background-color: #13294B;
     text-align: center;
     width: 100%;
 }
@@ -22,7 +24,8 @@ body {
 .topButtons {
     border: 2px white solid;
     border-radius: 16px;
-    background-color: #fa6300;
+    /*background-color: #fa6300;*/
+    background-color: #E84A27;
     color: white;
     font-size: 20px;
     font-family: Georgia, serif;
@@ -46,7 +49,7 @@ body {
 }
 
 .title {
-    color: black;
+    color: #13294B;
     font-size: 30px;
     font-family: Roboto, serif;
     position: relative;
@@ -74,8 +77,10 @@ iframe {
     width: 101%;
     justify-content: center;
     align-items: center;
-    border-top: .4em #fa6300 ridge;
-    border-bottom: .4em #fa6300 groove;
+    /*border-top: .4em #fa6300 ridge;*/
+    /*border-bottom: .4em #fa6300 groove;*/
+    border-top: .4em #E84A27 ridge;
+    border-bottom: .4em #E84A27 groove;
     padding-bottom: 5.6em;
 }
 
@@ -84,7 +89,7 @@ iframe {
     position: relative;
     bottom: 1.0em;
     width: 100%;
-    color: white;
+    color: #E84A27;
     white-space: nowrap;
     text-align: center;
     justify-content: center;
