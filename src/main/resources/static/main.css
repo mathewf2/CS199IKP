@@ -11,7 +11,11 @@ body {
     /*background: #fa6300;*/
     background: white;
     height: 55em;
+}
 
+.mainBody {
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .buttonGrid {
@@ -80,15 +84,15 @@ iframe {
     /*border-top: .4em #fa6300 ridge;*/
     /*border-bottom: .4em #fa6300 groove;*/
     border-top: .4em #E84A27 ridge;
-    border-bottom: .4em #E84A27 groove;
     padding-bottom: 5.6em;
 }
 
 .footer {
+    border-top: .4em #E84A27 ridge;
     display: flex;
-    position: relative;
-    bottom: 1.0em;
-    width: 100%;
+    position: absolute;
+    bottom: -0.8em;
+    width: 101%;
     color: #E84A27;
     white-space: nowrap;
     text-align: center;
@@ -97,4 +101,34 @@ iframe {
 
 .credit {
     font-family: Roboto, serif;
+}
+
+img {
+    margin-top: 2em;
+    border: 8px #E84A27 ridge;
+    width: 45em;
+}
+
+.description {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 80%;
+    padding: 3em;
+    background: #13294B;
+    border: 8px #E84A27 ridge;
+    color: white;
+}
+
+.githubLink {
+    color: #E84A27;
+}
+
+.githubLink:hover {
+    color: pink;
+}
+
+.home {
+    height: 100%;
 }
