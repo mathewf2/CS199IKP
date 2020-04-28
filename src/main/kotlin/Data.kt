@@ -96,8 +96,6 @@ class Data {
                 }
             }
         }
-        //println(generalMap)
-        //println(generalEntries)
         val studentEntries = studentResponse.getValues().filter { e ->
             e.isNotEmpty() && e[0] != "No (You don't need to answer and may skip to the next page)"
         }
@@ -121,13 +119,18 @@ class Data {
         val h = 500
         val bunch = GGBunch()
         for ((count, plot) in plotsz.withIndex()) {
-            println(plot.toSpec())
             bunch.addPlot(plot,0, count * h)
         }
 
         val spec = bunch.toSpec()
         val html = PlotHtmlExport.buildHtmlFromRawSpecs(spec, iFrame = false)
-        File("test.html").writeText(html)
+        File("htmltest.html").writeText(html)
+
+        val iframe = PlotHtmlExport.buildHtmlFromRawSpecs(spec, iFrame = true)
+        File("iframetest.html").writeText(iframe)
+
+        val svg = PlotSvgExport.buildSvgImageFromRawSpecs(spec, null)
+        File("svgtest.svg").writeText(svg)
 
 
     }

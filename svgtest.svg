@@ -1,0 +1,1059 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="plt-container" width="500.0" height="3833.3333333333335">
+<style type="text/css">
+
+  .plt-container {
+	font-family: "Lucida Grande", sans-serif;
+	cursor: crosshair;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+text {
+	font-size: 12px;
+	fill: #3d3d3d;
+}
+.plt-data-tooltip text {
+	font-size: 12px;
+}
+.plt-axis-tooltip text {
+	font-size: 10px;
+}
+.plt-axis line {
+	shape-rendering: crispedges;
+}
+.highlight {
+	fill-opacity: 0.75;
+}
+
+.plt-plot-title {
+
+  font-size: 16.0px;
+  font-weight: bold;
+}
+.plt-axis .tick text {
+
+  font-size: 10.0px;
+}
+.plt-axis.small-tick-font .tick text {
+
+  font-size: 8.0px;
+}
+.plt-axis-title text {
+
+  font-size: 12.0px;
+}
+.plt_legend .legend-title text {
+
+  font-size: 12.0px;
+  font-weight: bold;
+}
+.plt_legend text {
+
+  font-size: 10.0px;
+}
+
+  
+</style>
+<g transform="translate(0.0 0.0)" class="plt-plot">
+    <g class="plt-plot-title" transform="translate(250.0 12.0 ) ">
+      <text text-anchor="middle" dy="0.35em">
+      How has COVID-19 affected you the most?
+      </text>
+    </g>
+    <g transform="translate(20.0 34.0 ) ">
+      <g transform="translate(29.1 268.3333333333333 ) " class="plt-axis">
+        <g class="tick" transform="translate(90.77352941176471 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            Academically
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(177.2245098039216 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 21.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            Emotionally
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(263.67549019607844 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            Physically
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(350.1264705882353 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 21.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            Financially
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="440.9" y2="0.0" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " class="plt-axis">
+        <g class="tick" transform="translate(0.0 268.3333333333333 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.0
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 214.66666666666666 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.2
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 161.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.4
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 107.33333333333331 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.6
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 53.66666666666666 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.8
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            1.0
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="0.0" y2="268.3333333333333" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " clip-path="url(#a2MSEe)" clip-bounds-jfx="[rect (0.0, 0.0), (440.9, 268.3333333333333)]">
+        <defs>
+          <clipPath id="a2MSEe">
+            <rect x="0.0" y="0.0" width="440.9" height="268.3333333333333">
+            </rect>
+          </clipPath>
+        </defs>
+        <rect x="311.22352941176473" y="0.0" height="268.3333333333333" width="77.80588235294113" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="224.77254901960785" y="0.0" height="268.3333333333333" width="77.80588235294121" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="138.32156862745097" y="0.0" height="268.3333333333333" width="77.80588235294118" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="51.87058823529412" y="0.0" height="268.3333333333333" width="77.80588235294118" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+      </g>
+    </g>
+    <g class="plt-axis">
+      <g transform="translate(4.0 168.16666666666666 ) rotate(-90.0 ) " class="plt-axis-title">
+        <text text-anchor="middle" dy="0.7em">
+        count
+        </text>
+      </g>
+    </g>
+  </g>
+
+<g transform="translate(0.0 500.0)" class="plt-plot">
+    <g class="plt-plot-title" transform="translate(250.0 12.0 ) ">
+      <text text-anchor="middle" dy="0.35em">
+      Have you or someone you know
+      </text>
+    </g>
+    <g transform="translate(20.0 34.0 ) ">
+      <g transform="translate(15.7 50.0 ) " class="plt-axis">
+        <g class="tick" transform="translate(52.419230769230765 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) rotate(90.0 ) ">
+            <text style="fill:#000000;" dy="0.35em">
+            Been diagnosed with Coronavirus, Think you/they have Coronavirus, Know someone who has been diagnosed
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(102.34230769230768 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) rotate(90.0 ) ">
+            <text style="fill:#000000;" dy="0.35em">
+            None of the above
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(152.26538461538462 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) rotate(90.0 ) ">
+            <text style="fill:#000000;" dy="0.35em">
+            Been diagnosed with Coronavirus
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(202.18846153846152 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) rotate(90.0 ) ">
+            <text style="fill:#000000;" dy="0.35em">
+            Think you/they have Coronavirus, Know someone who has been diagnosed
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(252.11153846153843 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) rotate(90.0 ) ">
+            <text style="fill:#000000;" dy="0.35em">
+            Know someone who has been diagnosed
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(302.03461538461534 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) rotate(90.0 ) ">
+            <text style="fill:#000000;" dy="0.35em">
+            Think you/they have Coronavirus
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(351.9576923076923 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) rotate(90.0 ) ">
+            <text style="fill:#000000;" dy="0.35em">
+            Been diagnosed with Coronavirus, Know someone who has been diagnosed
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(401.8807692307692 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) rotate(90.0 ) ">
+            <text style="fill:#000000;" dy="0.35em">
+            Been diagnosed with Coronavirus, Think you/they have Coronavirus
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="454.3" y2="0.0" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(15.7 0.0 ) " class="plt-axis">
+        <g class="tick" transform="translate(0.0 50.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            1
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="0.0" y2="50.0" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(15.7 0.0 ) " clip-path="url(#u0IlwY)" clip-bounds-jfx="[rect (0.0, 0.0), (454.3, 50.0)]">
+        <defs>
+          <clipPath id="u0IlwY">
+            <rect x="0.0" y="0.0" width="454.3" height="50.0">
+            </rect>
+          </clipPath>
+        </defs>
+        <rect x="379.4153846153846" y="0.0" height="50.0" width="44.930769230769215" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="329.4923076923077" y="0.0" height="50.0" width="44.930769230769215" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="279.5692307692307" y="0.0" height="50.0" width="44.930769230769215" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="229.64615384615382" y="0.0" height="50.0" width="44.930769230769215" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="179.72307692307692" y="0.0" height="50.0" width="44.930769230769215" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="129.8" y="0.0" height="50.0" width="44.930769230769215" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="79.87692307692308" y="0.0" height="50.0" width="44.930769230769215" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="29.953846153846158" y="0.0" height="50.0" width="44.930769230769215" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+      </g>
+    </g>
+    <g class="plt-axis">
+      <g transform="translate(4.0 59.0 ) rotate(-90.0 ) " class="plt-axis-title">
+        <text text-anchor="middle" dy="0.7em">
+        count
+        </text>
+      </g>
+    </g>
+  </g>
+
+<g transform="translate(0.0 1000.0)" class="plt-plot">
+    <g class="plt-plot-title" transform="translate(380.29200000000003 12.0 ) ">
+      <text text-anchor="middle" dy="0.35em">
+      Are you making an attempt to observe the 6 ft distancing protocol?
+      </text>
+    </g>
+    <g transform="translate(20.0 34.0 ) ">
+      <g transform="translate(29.1 280.3333333333333 ) " class="plt-axis">
+        <g class="tick" transform="translate(149.33709677419358 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            Yes
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(291.5629032258065 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            No
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="440.9" y2="0.0" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " class="plt-axis">
+        <g class="tick" transform="translate(0.0 280.3333333333333 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.0
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 224.26666666666665 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.2
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 168.2 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.4
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 112.1333333333333 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.6
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 56.06666666666666 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.8
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            1.0
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="0.0" y2="280.3333333333333" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " clip-path="url(#2An0tY)" clip-bounds-jfx="[rect (0.0, 0.0), (440.9, 280.3333333333333)]">
+        <defs>
+          <clipPath id="2An0tY">
+            <rect x="0.0" y="0.0" width="440.9" height="280.3333333333333">
+            </rect>
+          </clipPath>
+        </defs>
+        <rect x="227.5612903225807" y="0.0" height="280.3333333333333" width="128.0032258064516" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="85.33548387096776" y="0.0" height="280.3333333333333" width="128.0032258064516" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+      </g>
+    </g>
+    <g class="plt-axis">
+      <g transform="translate(4.0 174.16666666666666 ) rotate(-90.0 ) " class="plt-axis-title">
+        <text text-anchor="middle" dy="0.7em">
+        count
+        </text>
+      </g>
+    </g>
+  </g>
+
+<g transform="translate(0.0 1500.0)" class="plt-plot">
+    <g class="plt-plot-title" transform="translate(368.76800000000003 12.0 ) ">
+      <text text-anchor="middle" dy="0.35em">
+      Are you trying to only leave your household for essential goods?
+      </text>
+    </g>
+    <g transform="translate(20.0 34.0 ) ">
+      <g transform="translate(29.1 280.3333333333333 ) " class="plt-axis">
+        <g class="tick" transform="translate(149.33709677419358 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            Yes
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(291.5629032258065 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            No
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="440.9" y2="0.0" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " class="plt-axis">
+        <g class="tick" transform="translate(0.0 280.3333333333333 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.0
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 224.26666666666665 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.2
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 168.2 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.4
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 112.1333333333333 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.6
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 56.06666666666666 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.8
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            1.0
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="0.0" y2="280.3333333333333" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " clip-path="url(#7A2Zzj)" clip-bounds-jfx="[rect (0.0, 0.0), (440.9, 280.3333333333333)]">
+        <defs>
+          <clipPath id="7A2Zzj">
+            <rect x="0.0" y="0.0" width="440.9" height="280.3333333333333">
+            </rect>
+          </clipPath>
+        </defs>
+        <rect x="227.5612903225807" y="0.0" height="280.3333333333333" width="128.0032258064516" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="85.33548387096776" y="0.0" height="280.3333333333333" width="128.0032258064516" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+      </g>
+    </g>
+    <g class="plt-axis">
+      <g transform="translate(4.0 174.16666666666666 ) rotate(-90.0 ) " class="plt-axis-title">
+        <text text-anchor="middle" dy="0.7em">
+        count
+        </text>
+      </g>
+    </g>
+  </g>
+
+<g transform="translate(0.0 2000.0)" class="plt-plot">
+    <g class="plt-plot-title" transform="translate(363.006 12.0 ) ">
+      <text text-anchor="middle" dy="0.35em">
+      Have you been more diligent about cleanliness and hand washing?
+      </text>
+    </g>
+    <g transform="translate(20.0 34.0 ) ">
+      <g transform="translate(29.1 280.3333333333333 ) " class="plt-axis">
+        <g class="tick" transform="translate(149.33709677419358 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            Yes
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(291.5629032258065 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            No
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="440.9" y2="0.0" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " class="plt-axis">
+        <g class="tick" transform="translate(0.0 280.3333333333333 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.0
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 224.26666666666665 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.2
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 168.2 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.4
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 112.1333333333333 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.6
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 56.06666666666666 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.8
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            1.0
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="0.0" y2="280.3333333333333" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " clip-path="url(#zT5CnW)" clip-bounds-jfx="[rect (0.0, 0.0), (440.9, 280.3333333333333)]">
+        <defs>
+          <clipPath id="zT5CnW">
+            <rect x="0.0" y="0.0" width="440.9" height="280.3333333333333">
+            </rect>
+          </clipPath>
+        </defs>
+        <rect x="227.5612903225807" y="0.0" height="280.3333333333333" width="128.0032258064516" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="85.33548387096776" y="0.0" height="280.3333333333333" width="128.0032258064516" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+      </g>
+    </g>
+    <g class="plt-axis">
+      <g transform="translate(4.0 174.16666666666666 ) rotate(-90.0 ) " class="plt-axis-title">
+        <text text-anchor="middle" dy="0.7em">
+        count
+        </text>
+      </g>
+    </g>
+  </g>
+
+<g transform="translate(0.0 2500.0)" class="plt-plot">
+    <g class="plt-plot-title" transform="translate(507.056 12.0 ) ">
+      <text text-anchor="middle" dy="0.35em">
+      When forced to leave the house, do you try to wear appropriate PPE? (Masks, gloves, etc)
+      </text>
+    </g>
+    <g transform="translate(20.0 34.0 ) ">
+      <g transform="translate(29.1 280.3333333333333 ) " class="plt-axis">
+        <g class="tick" transform="translate(149.33709677419358 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            No
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(291.5629032258065 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            Yes
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="440.9" y2="0.0" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " class="plt-axis">
+        <g class="tick" transform="translate(0.0 280.3333333333333 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.0
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 224.26666666666665 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.2
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 168.2 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.4
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 112.1333333333333 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.6
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 56.06666666666666 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.8
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            1.0
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="0.0" y2="280.3333333333333" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " clip-path="url(#GKbaGf)" clip-bounds-jfx="[rect (0.0, 0.0), (440.9, 280.3333333333333)]">
+        <defs>
+          <clipPath id="GKbaGf">
+            <rect x="0.0" y="0.0" width="440.9" height="280.3333333333333">
+            </rect>
+          </clipPath>
+        </defs>
+        <rect x="227.5612903225807" y="0.0" height="280.3333333333333" width="128.0032258064516" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="85.33548387096776" y="0.0" height="280.3333333333333" width="128.0032258064516" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+      </g>
+    </g>
+    <g class="plt-axis">
+      <g transform="translate(4.0 174.16666666666666 ) rotate(-90.0 ) " class="plt-axis-title">
+        <text text-anchor="middle" dy="0.7em">
+        count
+        </text>
+      </g>
+    </g>
+  </g>
+
+<g transform="translate(0.0 3000.0)" class="plt-plot">
+    <g class="plt-plot-title" transform="translate(501.29400000000004 12.0 ) ">
+      <text text-anchor="middle" dy="0.35em">
+      Have you recently gathered in a group of people outside of immediate household members?
+      </text>
+    </g>
+    <g transform="translate(20.0 34.0 ) ">
+      <g transform="translate(29.1 280.3333333333333 ) " class="plt-axis">
+        <g class="tick" transform="translate(149.33709677419358 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            No
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(291.5629032258065 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            Yes
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="440.9" y2="0.0" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " class="plt-axis">
+        <g class="tick" transform="translate(0.0 280.3333333333333 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.0
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 224.26666666666665 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.2
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 168.2 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.4
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 112.1333333333333 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.6
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 56.06666666666666 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.8
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            1.0
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="0.0" y2="280.3333333333333" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " clip-path="url(#QG9Wbj)" clip-bounds-jfx="[rect (0.0, 0.0), (440.9, 280.3333333333333)]">
+        <defs>
+          <clipPath id="QG9Wbj">
+            <rect x="0.0" y="0.0" width="440.9" height="280.3333333333333">
+            </rect>
+          </clipPath>
+        </defs>
+        <rect x="227.5612903225807" y="0.0" height="280.3333333333333" width="128.0032258064516" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="85.33548387096776" y="0.0" height="280.3333333333333" width="128.0032258064516" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+      </g>
+    </g>
+    <g class="plt-axis">
+      <g transform="translate(4.0 174.16666666666666 ) rotate(-90.0 ) " class="plt-axis-title">
+        <text text-anchor="middle" dy="0.7em">
+        count
+        </text>
+      </g>
+    </g>
+  </g>
+
+<g transform="translate(0.0 3500.0)" class="plt-plot">
+    <g class="plt-plot-title" transform="translate(766.346 12.0 ) ">
+      <text text-anchor="middle" dy="0.35em">
+      How well do you believe you have been following proper protocol? (Social distancing, foregoing nonessential, heightened hygiene, etc)
+      </text>
+    </g>
+    <g transform="translate(20.0 34.0 ) ">
+      <g transform="translate(29.1 280.3333333333333 ) " class="plt-axis">
+        <g class="tick" transform="translate(45.83613861386139 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            9
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(89.48960396039604 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            7
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(133.1430693069307 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            10
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(176.79653465346533 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            8
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(220.45 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            6
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(264.1034653465347 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            3
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(307.7569306930693 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            5
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(351.410396039604 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            1
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(395.0638613861386 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="0.0" y2="6.0">
+          </line>
+          <g transform="translate(0.0 9.0 ) ">
+            <text style="fill:#000000;" text-anchor="middle" dy="0.7em">
+            4
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="440.9" y2="0.0" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " class="plt-axis">
+        <g class="tick" transform="translate(0.0 280.3333333333333 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.0
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 224.26666666666665 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.2
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 168.2 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.4
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 112.1333333333333 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.6
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 56.06666666666666 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            0.8
+            </text>
+          </g>
+        </g>
+        <g class="tick" transform="translate(0.0 0.0 ) ">
+          <line stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0" x2="-6.0" y2="0.0">
+          </line>
+          <g transform="translate(-9.0 0.0 ) ">
+            <text style="fill:#000000;" text-anchor="end" dy="0.35em">
+            1.0
+            </text>
+          </g>
+        </g>
+        <line x1="0.0" y1="0.0" x2="0.0" y2="280.3333333333333" stroke-width="1.0" stroke="rgb(0,0,0)" stroke-opacity="1.0">
+        </line>
+      </g>
+      <g transform="translate(29.1 0.0 ) " clip-path="url(#5DZzzD)" clip-bounds-jfx="[rect (0.0, 0.0), (440.9, 280.3333333333333)]">
+        <defs>
+          <clipPath id="5DZzzD">
+            <rect x="0.0" y="0.0" width="440.9" height="280.3333333333333">
+            </rect>
+          </clipPath>
+        </defs>
+        <rect x="375.41980198019803" y="0.0" height="280.3333333333333" width="39.28811881188119" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="331.7663366336634" y="0.0" height="280.3333333333333" width="39.28811881188119" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="288.1128712871287" y="0.0" height="280.3333333333333" width="39.28811881188119" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="244.45940594059405" y="0.0" height="280.3333333333333" width="39.28811881188116" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="200.8059405940594" y="0.0" height="280.3333333333333" width="39.28811881188116" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="157.15247524752476" y="0.0" height="280.3333333333333" width="39.28811881188116" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="113.4990099009901" y="0.0" height="280.3333333333333" width="39.28811881188116" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="69.84554455445546" y="0.0" height="280.3333333333333" width="39.288118811881176" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+        <rect x="26.192079207920802" y="0.0" height="280.3333333333333" width="39.288118811881176" stroke="rgb(0,0,0)" stroke-opacity="0.0" fill="rgb(0,0,128)" fill-opacity="1.0" stroke-width="1.0">
+        </rect>
+      </g>
+    </g>
+    <g class="plt-axis">
+      <g transform="translate(4.0 174.16666666666666 ) rotate(-90.0 ) " class="plt-axis-title">
+        <text text-anchor="middle" dy="0.7em">
+        count
+        </text>
+      </g>
+    </g>
+  </g>
+
+</svg>
