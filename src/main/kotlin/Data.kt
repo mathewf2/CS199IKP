@@ -8,14 +8,32 @@ import com.google.api.client.json.jackson2.JacksonFactory
 import com.google.api.client.util.store.FileDataStoreFactory
 import com.google.api.services.sheets.v4.Sheets
 import com.google.api.services.sheets.v4.SheetsScopes
+import jetbrains.datalore.plot.PlotHtmlExport
+import jetbrains.datalore.plot.PlotSvgExport
+import jetbrains.datalore.plot.config.Option
+import jetbrains.letsPlot.*
+import jetbrains.letsPlot.geom.geom_area
+import jetbrains.letsPlot.geom.geom_bar
+import jetbrains.letsPlot.geom.geom_density
+import jetbrains.letsPlot.intern.Plot
+import jetbrains.letsPlot.intern.StatKind
+import jetbrains.letsPlot.intern.layer.LayerBase
+import jetbrains.letsPlot.intern.layer.StatOptions
+import jetbrains.letsPlot.intern.layer.geom.BarMapping
+import jetbrains.letsPlot.intern.toSpec
+import jetbrains.letsPlot.stat.stat_count
+import org.jetbrains.numkt.identity
+import org.jetbrains.numkt.tile
+import java.io.File
 import java.io.InputStream
 import java.io.InputStreamReader
+import kotlin.reflect.typeOf
 
 class Data {
     var app_name = "CS 199 IKP"
     var id = "1JWxwV81A2hFBWK0eO30wFkGmuEtHxDImCKGx9KLdlZA"
 
-    fun authorize(): Credential {
+    private fun authorize(): Credential {
         val input: InputStream = this.javaClass.getResourceAsStream("/credentials.json")
         val clientSecrets: GoogleClientSecrets = GoogleClientSecrets.load(
             JacksonFactory.getDefaultInstance(), InputStreamReader(input)
@@ -27,7 +45,7 @@ class Data {
             GoogleNetHttpTransport.newTrustedTransport(), JacksonFactory.getDefaultInstance(),
             clientSecrets, scopes
         )
-            .setDataStoreFactory(FileDataStoreFactory(java.io.File("tokens")))
+            .setDataStoreFactory(FileDataStoreFactory(File("tokens")))
             .setAccessType("offline")
             .build()
         return AuthorizationCodeInstalledApp(
@@ -35,7 +53,7 @@ class Data {
         ).authorize("user")
     }
 
-    fun getSheetsService(): Sheets {
+    private fun getSheetsService(): Sheets {
         val credential = authorize()
         return Sheets.Builder(
             GoogleNetHttpTransport.newTrustedTransport(),
@@ -47,10 +65,10 @@ class Data {
 
     fun main() {
         val service = getSheetsService()
-        val generalRange = "B2:I"
-        val studentRange = "J2:R"
-        val facultyRange = "S2:V"
-        val financialRange = "W2:Z"
+        val generalRange = "B:I"
+        val studentRange = "J:R"
+        val facultyRange = "S:V"
+        val financialRange = "W:Z"
 
         val generalResponse = service.spreadsheets().values()
             .get(id, generalRange)
@@ -66,6 +84,20 @@ class Data {
             .execute()
 
         val generalEntries = generalResponse.getValues()
+
+        val generalMap = mutableMapOf<String, List<Any>?>()
+        for (list in generalEntries) {
+            for (i in 0 until list.size) {
+                val question = generalEntries[0][i].toString()
+                if (generalMap.size < list.size) {
+                    generalMap[question] = listOf()
+                } else if (list[i] != " ") {
+                    generalMap[question] = generalMap[question]?.plus(list[i])
+                }
+            }
+        }
+        //println(generalMap)
+        //println(generalEntries)
         val studentEntries = studentResponse.getValues().filter { e ->
             e.isNotEmpty() && e[0] != "No (You don't need to answer and may skip to the next page)"
         }
@@ -74,10 +106,29 @@ class Data {
         }
         val financialEntries = financialResponse.getValues()
 
-        println(generalEntries)
-        println(studentEntries)
-        println(facultyEntries)
-        println(financialEntries)
+        val test = HashMap<Any, Int>()
+        for(submission in generalEntries) {
+            var count = test.getOrDefault(submission[0], 0)
+            test[submission[0]] = ++count
+        }
+
+        var plotsz = listOf<Plot>()
+        for (key in generalMap.keys) {
+            plotsz = plotsz.plus(lets_plot(generalMap[key]) + geom_bar {
+            } + ggtitle(key))
+        }
+
+        val h = 500
+        val bunch = GGBunch()
+        for ((count, plot) in plotsz.withIndex()) {
+            println(plot.toSpec())
+            bunch.addPlot(plot,0, count * h)
+        }
+
+        val spec = bunch.toSpec()
+        val html = PlotHtmlExport.buildHtmlFromRawSpecs(spec, iFrame = false)
+        File("test.html").writeText(html)
+
 
     }
 }
