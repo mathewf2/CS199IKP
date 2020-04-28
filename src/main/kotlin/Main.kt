@@ -64,7 +64,12 @@ fun Application.data() {
                             }
 
                             p(classes = "description") {
-                                +"Thank you for taking the time to explore information and provide your feedback on the impact of Covid-19. We hope you stay safe and maintain compassion during these frustrating times. We will get through this together!"
+                                +"Thank you for taking the time to explore information and provide your feedback on the impact of Covid-19. We hope you stay safe and maintain compassion during these frustrating times."
+                                br {
+                                    br {
+                                        +"We will get through this together!"
+                                    }
+                                }
                             }
                         }
                     }
