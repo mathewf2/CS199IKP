@@ -9,6 +9,7 @@ import io.ktor.routing.get
 import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
+import kotlinx.coroutines.runBlocking
 import kotlinx.html.*
 
 import java.awt.SystemColor.window
@@ -166,9 +167,13 @@ fun Application.data() {
                                 }
                             }
                         }
-
                         div(classes = "iframeHolder") {
-
+                            button {
+                                +"Update"
+                            }
+                            iframe {
+                                src = "/static/iframetest.html"
+                            }
                         }
                     }
                     div (classes = "footer") {
