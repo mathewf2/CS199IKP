@@ -183,6 +183,6 @@ fun Application.data() {
 }
 
 fun main() {
-    embeddedServer(Netty, port = 8080, module = Application::data).start(wait = true)
-    //Data().main()
+    //embeddedServer(Netty, port = 8080, module = Application::data).start(wait = true)
+    Data().main()
 }

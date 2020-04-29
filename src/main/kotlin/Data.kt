@@ -10,7 +10,9 @@ import com.google.api.services.sheets.v4.Sheets
 import com.google.api.services.sheets.v4.SheetsScopes
 import jetbrains.datalore.plot.PlotHtmlExport
 import jetbrains.datalore.plot.PlotSvgExport
+import jetbrains.datalore.plot.builder.theme.Theme
 import jetbrains.datalore.plot.config.Option
+import jetbrains.datalore.plot.config.theme.ThemeConfig
 import jetbrains.letsPlot.*
 import jetbrains.letsPlot.geom.geom_area
 import jetbrains.letsPlot.geom.geom_bar
@@ -24,6 +26,7 @@ import jetbrains.letsPlot.intern.toSpec
 import jetbrains.letsPlot.stat.stat_count
 import org.jetbrains.numkt.identity
 import org.jetbrains.numkt.tile
+import org.jetbrains.numkt.type
 import java.io.File
 import java.io.InputStream
 import java.io.InputStreamReader
@@ -110,26 +113,34 @@ class Data {
             test[submission[0]] = ++count
         }
 
-        var plotsz = listOf<Plot>()
+        val plotsz = mutableListOf<Plot>()
         for (key in generalMap.keys) {
-            plotsz = plotsz.plus(lets_plot(generalMap[key]) + geom_bar {
-            } + ggtitle(key))
+            val title = key
+            val plot = lets_plot(generalMap[key]) + geom_bar() + ggtitle(title)
+            plotsz.add(plot)
+            //println(plot.toSpec())
+            //plotsz = plotsz.plus(lets_plot(generalMap[key]) + geom_bar {
+
+//            }  + ggtitle(title))
+            if (title.length > 100) {
+                plotsz[plotsz.lastIndex] = plotsz.last() + ggsize(9 * title.length, 300)
+            }
         }
 
         val h = 500
+        val w = 500
         val bunch = GGBunch()
         for ((count, plot) in plotsz.withIndex()) {
-            bunch.addPlot(plot,0, count * h)
+            bunch.addPlot(plot,(count % 3) * w, (count / 3) * h)
         }
 
-        val spec = bunch.toSpec()
-        val html = PlotHtmlExport.buildHtmlFromRawSpecs(spec, iFrame = false)
+        val html = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = false)
         File("htmltest.html").writeText(html)
 
-        val iframe = PlotHtmlExport.buildHtmlFromRawSpecs(spec, iFrame = true)
+        val iframe = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = true)
         File("iframetest.html").writeText(iframe)
 
-        val svg = PlotSvgExport.buildSvgImageFromRawSpecs(spec, null)
+        val svg = PlotSvgExport.buildSvgImageFromRawSpecs(bunch.toSpec(), null)
         File("svgtest.svg").writeText(svg)
 
 
