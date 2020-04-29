@@ -12,4 +12,4 @@ The purpose of this project is visualize a dataset of responses regarding the ef
 
 - [ ] Process survey results into data visualization
 
-- [ ] Implement some sort of "live" updating feature (if applicable)
+- [X] Implement some sort of "live" updating feature (if applicable)
