@@ -9,9 +9,8 @@ import io.ktor.routing.get
 import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 import kotlinx.html.*
-
 import java.awt.SystemColor.window
 import java.net.URL
 
@@ -43,6 +42,10 @@ fun Application.data() {
 
                                 a("Data", classes = "topButtons") {
                                     +"Data"
+                                }
+
+                                a("About", classes = "topButtons") {
+                                    +"About"
                                 }
                             }
                         }
@@ -113,6 +116,10 @@ fun Application.data() {
                                 a("Data", classes = "topButtons") {
                                     +"Data"
                                 }
+
+                                a("About", classes = "topButtons") {
+                                    +"About"
+                                }
                             }
                         }
 
@@ -126,16 +133,7 @@ fun Application.data() {
                             }
                         }
                     }
-                    script(type = ScriptType.textJavaScript) {
-                        unsafe {
-                            raw(
-                                """
-                                    function my() { return 1; }
-                                    
-                                    """
-                            )
-                        }
-                    }
+
                     div (classes = "footer") {
                         h4 (classes = "credit") {
                             +"A UIUC CS199IKP Project by Mathew Farley and Noah Rogers"
@@ -165,15 +163,71 @@ fun Application.data() {
                                 a("Data", classes = "topButtons") {
                                     +"Data"
                                 }
+
+                                a("About", classes = "topButtons") {
+                                    +"About"
+                                }
                             }
                         }
                         div(classes = "iframeHolder") {
-                            button {
-                                +"Update"
-                            }
+//                            button() {
+//                                onClick = "update()"
+//                                +"Update"
+//                            }
                             iframe {
                                 src = "/static/iframetest.html"
                             }
+                        }
+                    }
+                    script(type = ScriptType.textJavaScript) {
+                        unsafe {
+                            raw(
+                                """
+                                    function update() {
+                                        alert(data.main())
+                                        console.log("it worked");
+                                    }
+                                    """
+                            )
+                        }
+                    }
+                    div (classes = "footer") {
+                        h4 (classes = "credit") {
+                            +"A UIUC CS199IKP Project by Mathew Farley and Noah Rogers"
+                        }
+                    }
+                }
+            }
+        }
+        get("/About") {
+            call.respondHtml {
+                head {
+                    link(rel = "stylesheet", href = "/static/main.css")
+                }
+
+                body {
+                    div {
+                        div("row") {
+                            div("buttonGrid homeC") {
+                                a("/", classes = "topButtons") {
+                                    +"Home"
+                                }
+
+                                a("Survey", classes = "topButtons") {
+                                    +"Survey"
+                                }
+
+                                a("Data", classes = "topButtons") {
+                                    +"Data"
+                                }
+
+                                a("About", classes = "topButtons") {
+                                    +"About"
+                                }
+                            }
+                        }
+                        div(classes = "iframeHolder") {
+
                         }
                     }
                     div (classes = "footer") {
@@ -188,6 +242,17 @@ fun Application.data() {
 }
 
 fun main() {
-    //embeddedServer(Netty, port = 8080, module = Application::data).start(wait = true)
-    Data().main()
+    runBlocking {
+        launch {
+            delay(1000)
+            while(true) {
+                Data().main()
+                println("ran")
+                delay(1000*60*10)
+            }
+        }
+        launch {
+            embeddedServer(Netty, port = 8080, module = Application::data).start()
+        }
+    }
 }

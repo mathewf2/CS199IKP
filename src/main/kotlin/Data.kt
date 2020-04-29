@@ -134,14 +134,14 @@ class Data {
             bunch.addPlot(plot,(count % 3) * w, (count / 3) * h)
         }
 
-        val html = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = false)
-        File("htmltest.html").writeText(html)
+//        val html = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = false)
+//        File("src/main/resources/static/htmltest.html").writeText(html)
 
         val iframe = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = true)
-        File("iframetest.html").writeText(iframe)
+        File("src/main/resources/static/iframetest.html").writeText(iframe)
 
-        val svg = PlotSvgExport.buildSvgImageFromRawSpecs(bunch.toSpec(), null)
-        File("svgtest.svg").writeText(svg)
+//        val svg = PlotSvgExport.buildSvgImageFromRawSpecs(bunch.toSpec(), null)
+//        File("src/main/resources/static/svgtest.svg").writeText(svg)
 
 
     }
