@@ -1,3 +1,5 @@
+package KotlinDataScience
+
 import com.google.api.client.auth.oauth2.Credential
 import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp
 import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver
@@ -18,6 +20,7 @@ import jetbrains.letsPlot.ggsize
 import jetbrains.letsPlot.ggtitle
 import jetbrains.letsPlot.intern.Plot
 import jetbrains.letsPlot.lets_plot
+import java.nio.file.Paths
 
 /* Guidance in setting up the Data() class taken from: https://www.youtube.com/watch?v=8yJrQk9ShPg
  * The tutorial is for java, but it functions the same per Kotlin, nonetheless.
@@ -136,7 +139,9 @@ class Data {
             println("saved to file")
             // Saves the bunch to an iframe; html and svg are options as well
             val iframe = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = true)
-            File("src/main/resources/static/iframetest.html").writeText(iframe)
+            val file = File("")
+            println(file.absolutePath)
+            File("KotlinDataScience/src/main/static/iframetest.html").writeText(iframe)
         }
     }
 }

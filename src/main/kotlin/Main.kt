@@ -1,3 +1,5 @@
+package KotlinDataScience
+
 import io.ktor.application.Application
 import io.ktor.application.call
 import io.ktor.application.install
@@ -15,7 +17,6 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.html.*
 
 /* ktlint does not like wildcard imports, here are the necessary imports if we want to run ktlint again.
- *
 import kotlinx.html.a
 import kotlinx.html.body
 import kotlinx.html.br

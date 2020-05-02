@@ -1,3 +1,4 @@
+import KotlinDataScience.data
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
 import io.ktor.application.Application
