@@ -113,7 +113,7 @@ class Data {
 
             val test = HashMap<Any, Int>()
             for (submission in generalEntries) {
-                var count = test.getOrDefault(submission[0], 0)
+               var count = test.getOrDefault(submission[0], 0)
                 test[submission[0]] = ++count
             }
 
@@ -136,7 +136,7 @@ class Data {
             println("saved to file")
             // Saves the bunch to an iframe; html and svg are options as well
             val iframe = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = true)
-            File("src/main/resources/static/iframetest.html").writeText(iframe)
+            File("build/resources/main/static/iframetest.html").writeText(iframe)
         }
     }
 }
