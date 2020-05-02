@@ -133,14 +133,14 @@ class Data {
                 bunch.addPlot(plot, (count % 3) * w, (count / 3) * h)
             }
 
-            /* When run locally, it saves the following file properly. However, when using shadowJar to create the fat
-             * jar, and then running the .jar file, it says that directory does not exist. Changing the directory to
-             * ../resources/main/static/iframetest.html works, but does not work locally.
+            /* When run locally through an IDE, it saves the following file properly. However, when using shadowJar to
+             * create the fat jar, and then running the .jar file, it says that directory does not exist. Changing
+             * the directory to ../resources/main/static/iframetest.html works, but does not work locally.
              */
             println("saved to file")
             // Saves the bunch to an iframe; html and svg are options as well
             val iframe = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = true)
-            File("../resources/main/static/iframetest.html").writeText(iframe)
+            File("build/resources/main/static/iframetest.html").writeText(iframe)
         }
     }
 }
