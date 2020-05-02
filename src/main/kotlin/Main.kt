@@ -12,6 +12,7 @@ import io.ktor.server.netty.Netty
 import kotlinx.coroutines.*
 import kotlinx.html.*
 import java.awt.SystemColor.window
+import java.io.File
 import java.net.URL
 
 
@@ -235,7 +236,8 @@ fun Application.data() {
                                 + "\n"
                                 + "\n Ultimately, our goal was to collect data ourselves (via Google Forms, accessed via Google Sheets API), represent that data through Lets-Plot-Kotlin, host it on a KTOR server, utilize coroutines to implement a live updating feature to constantly fetch new survey results, and host it on AWS.\n"
                                 + "\n"
-                                + "\n Noah primarily dealth with the front-end work and the coroutines, while Mat worked on the backend and data collection. Ultimately, our biggest struggles arised from working with some of incompatibility, or lack of documentation, for Kotlin considering it's a new language. Lets Plot, though written in Kotlin natively, is primarily a Python library where not all of the features have been appropriately ported over to support the Kotlin language. Lets Plot does, however, allow for a huge variety of exciting visual representations to play with, which can lead to some powerful graphs (more powerful than ours, surely!)\n"
+                                + "\n Noah primarily dealt with the front-end work and the coroutines, while Mat worked on the backend and data collection. Ultimately, our biggest struggles arose from working with some of the incompatibility, or lack of documentation, for Kotlin considering it's a new language."
+                                +" Lets Plot, though written in Kotlin natively, is primarily a Python library where not all of the features have been appropriately ported over to support the Kotlin language. Lets Plot does, however, allow for a huge variety of exciting visual representations to play with, which can lead to some powerful graphs (more powerful than ours, surely!)\n"
                                 + "\n The survey and purpose, though many steps were taken to avoid this, are inherently biased towards individuals in a college setting. We spent a lot of time trying to make it as generic and relevant to all populations as much as possible, but we still faulted there in some regard. Both of us are a bit new to the field of data science, so it certainly is not our expertise."
                             }
                         }
@@ -262,7 +264,15 @@ fun main() {
             }
         }
         launch {
-            embeddedServer(Netty, port = 8080, module = Application::data).start()
+            val src = File("src/main/resources/static/iframetest.html")
+            if(src.exists()) {
+                embeddedServer(
+                    Netty,
+                    watchPaths = listOf(src.absolutePath),
+                    port = 8080,
+                    module = Application::data
+                ).start()
+            }
         }
     }
 }
