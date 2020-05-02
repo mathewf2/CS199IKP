@@ -29,6 +29,7 @@ In the mean time, you can access our site locally after cloning. The default por
 - [X] Implement some sort of "live" updating feature (if applicable)
 
 - [ ] Make the graphs more meaningful & aesthetically pleasing
+  - We have *a lot* of data that is currently not being used, as well.
 
 - [ ] Host on AWS
 
