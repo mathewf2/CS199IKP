@@ -8,20 +8,22 @@ import com.google.api.client.json.jackson2.JacksonFactory
 import com.google.api.client.util.store.FileDataStoreFactory
 import com.google.api.services.sheets.v4.Sheets
 import com.google.api.services.sheets.v4.SheetsScopes
-import jetbrains.datalore.plot.PlotHtmlExport
-import jetbrains.letsPlot.*
-import jetbrains.letsPlot.geom.geom_bar
-import jetbrains.letsPlot.intern.Plot
 import java.io.File
 import java.io.InputStream
 import java.io.InputStreamReader
-
+import jetbrains.datalore.plot.PlotHtmlExport
+import jetbrains.letsPlot.GGBunch
+import jetbrains.letsPlot.geom.geom_bar
+import jetbrains.letsPlot.ggsize
+import jetbrains.letsPlot.ggtitle
+import jetbrains.letsPlot.intern.Plot
+import jetbrains.letsPlot.lets_plot
 
 /* Guidance in setting up the Data() class taken from: https://www.youtube.com/watch?v=8yJrQk9ShPg
  * The tutorial is for java, but it functions the same per Kotlin, nonetheless.
  * Effectively, this gives the user access to the sheets requested, and saves their authorization locally.*/
 class Data {
-    var app_name = "CS 199 IKP"
+    var appName = "CS 199 IKP"
     var id = "1JWxwV81A2hFBWK0eO30wFkGmuEtHxDImCKGx9KLdlZA"
 
     private fun authorize(): Credential {
@@ -50,7 +52,7 @@ class Data {
             GoogleNetHttpTransport.newTrustedTransport(),
             JacksonFactory.getDefaultInstance(), credential
         )
-            .setApplicationName(app_name)
+            .setApplicationName(appName)
             .build()
     }
 
@@ -131,6 +133,7 @@ class Data {
                 bunch.addPlot(plot, (count % 3) * w, (count / 3) * h)
             }
 
+            println("saved to file")
             // Saves the bunch to an iframe; html and svg are options as well
             val iframe = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = true)
             File("src/main/resources/static/iframetest.html").writeText(iframe)
