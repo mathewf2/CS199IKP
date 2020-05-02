@@ -15,6 +15,23 @@ import java.awt.SystemColor.window
 import java.io.File
 import java.net.URL
 
+/* ktlint does not like wildcard imports, here are the necessary imports if we want to run ktlint again.
+ *
+import kotlinx.html.a
+import kotlinx.html.body
+import kotlinx.html.br
+import kotlinx.html.div
+import kotlinx.html.h1
+import kotlinx.html.h4
+import kotlinx.html.head
+import kotlinx.html.iframe
+import kotlinx.html.img
+import kotlinx.html.link
+import kotlinx.html.p
+import kotlinx.html.script
+import kotlinx.html.unsafe
+ */
+
 
 fun Application.data() {
     install(FreeMarker)
@@ -63,7 +80,11 @@ fun Application.data() {
                             p(classes = "description") {
                                 +"If you are interested in seeing and/or editing the code for the project, here is a link to our "
 
-                                a(href =  "https://github.com/mathewf2/CS199IKP", target = "_blank", classes = "githubLink") {
+                                a(
+                                    href =  "https://github.com/mathewf2/CS199IKP",
+                                    target = "_blank",
+                                    classes = "githubLink")
+                                {
                                     +"Public Github"
                                 }
                             }
