@@ -256,7 +256,7 @@ fun main() {
         launch {
             delay(1000)
             while(true) {
-                Data().plot()
+                Data.plot()
                 println("ran")
                 delay(3500)
             }

@@ -16,6 +16,10 @@ import java.io.File
 import java.io.InputStream
 import java.io.InputStreamReader
 
+
+/* Guidance in setting up the Data() class taken from: https://www.youtube.com/watch?v=8yJrQk9ShPg
+ * The tutorial is for java, but it functions the same per Kotlin, nonetheless.
+ * Effectively, this gives the user access to the sheets requested, and saves their authorization locally.*/
 class Data {
     var app_name = "CS 199 IKP"
     var id = "1JWxwV81A2hFBWK0eO30wFkGmuEtHxDImCKGx9KLdlZA"
@@ -50,22 +54,24 @@ class Data {
             .build()
     }
 
-    /* This fetches the data from the Google Sheets and plots graphs based on the data received.
+    /* Static plot() */
+    companion object {
+        /* This fetches the data from the Google Sheets and plots graphs based on the data received.
      * The commented out blocks of code are for fetching other data in the survey. Currently not using that data, so
      * they were commented out to prevent unnecessary requests. */
-    fun plot() {
-        val service = getSheetsService()
-        val generalRange = "B:I"
-        /*
+        fun plot() {
+            val service = Data().getSheetsService()
+            val generalRange = "B:I"
+            /*
         val studentRange = "J:R"
         val facultyRange = "S:V"
         val financialRange = "W:Z"
          */
 
-        val generalResponse = service.spreadsheets().values()
-            .get(id, generalRange)
-            .execute()
-        /*
+            val generalResponse = service.spreadsheets().values()
+                .get(Data().id, generalRange)
+                .execute()
+            /*
         val studentResponse = service.spreadsheets().values()
             .get(id, studentRange)
             .execute()
@@ -78,21 +84,21 @@ class Data {
 
          */
 
-        val generalEntries = generalResponse.getValues()
+            val generalEntries = generalResponse.getValues()
 
-        val generalMap = mutableMapOf<String, List<Any>?>()
-        for (list in generalEntries) {
-            for (i in 0 until list.size) {
-                val question = generalEntries[0][i].toString()
-                if (generalMap.size < list.size) {
-                    generalMap[question] = listOf()
-                } else if (list[i] != " ") {
-                    generalMap[question] = generalMap[question]?.plus(list[i])
+            val generalMap = mutableMapOf<String, List<Any>?>()
+            for (list in generalEntries) {
+                for (i in 0 until list.size) {
+                    val question = generalEntries[0][i].toString()
+                    if (generalMap.size < list.size) {
+                        generalMap[question] = listOf()
+                    } else if (list[i] != " ") {
+                        generalMap[question] = generalMap[question]?.plus(list[i])
+                    }
                 }
             }
-        }
 
-        /*
+            /*
         val studentEntries = studentResponse.getValues().filter { e ->
             e.isNotEmpty() && e[0] != "No (You don't need to answer and may skip to the next page)"
         }
@@ -103,30 +109,31 @@ class Data {
 
          */
 
-        val test = HashMap<Any, Int>()
-        for(submission in generalEntries) {
-            var count = test.getOrDefault(submission[0], 0)
-            test[submission[0]] = ++count
-        }
-
-        val plots = mutableListOf<Plot>()
-        for (key in generalMap.keys) {
-            val plot = lets_plot(generalMap[key]) + geom_bar() + ggtitle(key)
-            plots.add(plot)
-            if (key.length > 50) {
-                plots[plots.lastIndex] = plots.last() + ggsize(9 * key.length, 300)
+            val test = HashMap<Any, Int>()
+            for (submission in generalEntries) {
+                var count = test.getOrDefault(submission[0], 0)
+                test[submission[0]] = ++count
             }
-        }
 
-        val h = 500
-        val w = 750
-        val bunch = GGBunch()
-        for ((count, plot) in plots.withIndex()) {
-            bunch.addPlot(plot,(count % 3) * w, (count / 3) * h)
-        }
+            val plots = mutableListOf<Plot>()
+            for (key in generalMap.keys) {
+                val plot = lets_plot(generalMap[key]) + geom_bar() + ggtitle(key)
+                plots.add(plot)
+                if (key.length > 50) {
+                    plots[plots.lastIndex] = plots.last() + ggsize(9 * key.length, 300)
+                }
+            }
 
-        // Saves the bunch to an iframe; html and svg are options as well
-        val iframe = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = true)
-        File("src/main/resources/static/iframetest.html").writeText(iframe)
+            val h = 500
+            val w = 750
+            val bunch = GGBunch()
+            for ((count, plot) in plots.withIndex()) {
+                bunch.addPlot(plot, (count % 3) * w, (count / 3) * h)
+            }
+
+            // Saves the bunch to an iframe; html and svg are options as well
+            val iframe = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = true)
+            File("src/main/resources/static/iframetest.html").writeText(iframe)
+        }
     }
 }
