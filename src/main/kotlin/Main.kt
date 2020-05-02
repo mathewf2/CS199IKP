@@ -287,6 +287,7 @@ fun main() {
             }
         }
         launch {
+            println("test")
             val src = File("src/main/resources/static/iframetest.html")
             if (src.exists()) {
                 embeddedServer(
