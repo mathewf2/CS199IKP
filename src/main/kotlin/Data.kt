@@ -9,28 +9,12 @@ import com.google.api.client.util.store.FileDataStoreFactory
 import com.google.api.services.sheets.v4.Sheets
 import com.google.api.services.sheets.v4.SheetsScopes
 import jetbrains.datalore.plot.PlotHtmlExport
-import jetbrains.datalore.plot.PlotSvgExport
-import jetbrains.datalore.plot.builder.theme.Theme
-import jetbrains.datalore.plot.config.Option
-import jetbrains.datalore.plot.config.theme.ThemeConfig
 import jetbrains.letsPlot.*
-import jetbrains.letsPlot.geom.geom_area
 import jetbrains.letsPlot.geom.geom_bar
-import jetbrains.letsPlot.geom.geom_density
 import jetbrains.letsPlot.intern.Plot
-import jetbrains.letsPlot.intern.StatKind
-import jetbrains.letsPlot.intern.layer.LayerBase
-import jetbrains.letsPlot.intern.layer.StatOptions
-import jetbrains.letsPlot.intern.layer.geom.BarMapping
-import jetbrains.letsPlot.intern.toSpec
-import jetbrains.letsPlot.stat.stat_count
-import org.jetbrains.numkt.identity
-import org.jetbrains.numkt.tile
-import org.jetbrains.numkt.type
 import java.io.File
 import java.io.InputStream
 import java.io.InputStreamReader
-import kotlin.reflect.typeOf
 
 class Data {
     var app_name = "CS 199 IKP"
@@ -66,16 +50,22 @@ class Data {
             .build()
     }
 
-    fun main() {
+    /* This fetches the data from the Google Sheets and plots graphs based on the data received.
+     * The commented out blocks of code are for fetching other data in the survey. Currently not using that data, so
+     * they were commented out to prevent unnecessary requests. */
+    fun plot() {
         val service = getSheetsService()
         val generalRange = "B:I"
+        /*
         val studentRange = "J:R"
         val facultyRange = "S:V"
         val financialRange = "W:Z"
+         */
 
         val generalResponse = service.spreadsheets().values()
             .get(id, generalRange)
             .execute()
+        /*
         val studentResponse = service.spreadsheets().values()
             .get(id, studentRange)
             .execute()
@@ -85,6 +75,8 @@ class Data {
         val financialResponse = service.spreadsheets().values()
             .get(id, financialRange)
             .execute()
+
+         */
 
         val generalEntries = generalResponse.getValues()
 
@@ -99,6 +91,8 @@ class Data {
                 }
             }
         }
+
+        /*
         val studentEntries = studentResponse.getValues().filter { e ->
             e.isNotEmpty() && e[0] != "No (You don't need to answer and may skip to the next page)"
         }
@@ -107,42 +101,32 @@ class Data {
         }
         val financialEntries = financialResponse.getValues()
 
+         */
+
         val test = HashMap<Any, Int>()
         for(submission in generalEntries) {
             var count = test.getOrDefault(submission[0], 0)
             test[submission[0]] = ++count
         }
 
-        val plotsz = mutableListOf<Plot>()
+        val plots = mutableListOf<Plot>()
         for (key in generalMap.keys) {
-            val title = key
-            val plot = lets_plot(generalMap[key]) + geom_bar() + ggtitle(title)
-            plotsz.add(plot)
-            //println(plot.toSpec())
-            //plotsz = plotsz.plus(lets_plot(generalMap[key]) + geom_bar {
-
-//            }  + ggtitle(title))
-            if (title.length > 50) {
-                plotsz[plotsz.lastIndex] = plotsz.last() + ggsize(9 * title.length, 300)
+            val plot = lets_plot(generalMap[key]) + geom_bar() + ggtitle(key)
+            plots.add(plot)
+            if (key.length > 50) {
+                plots[plots.lastIndex] = plots.last() + ggsize(9 * key.length, 300)
             }
         }
 
         val h = 500
         val w = 750
         val bunch = GGBunch()
-        for ((count, plot) in plotsz.withIndex()) {
+        for ((count, plot) in plots.withIndex()) {
             bunch.addPlot(plot,(count % 3) * w, (count / 3) * h)
         }
 
-//        val html = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = false)
-//        File("src/main/resources/static/htmltest.html").writeText(html)
-
+        // Saves the bunch to an iframe; html and svg are options as well
         val iframe = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = true)
         File("src/main/resources/static/iframetest.html").writeText(iframe)
-
-//        val svg = PlotSvgExport.buildSvgImageFromRawSpecs(bunch.toSpec(), null)
-//        File("src/main/resources/static/svgtest.svg").writeText(svg)
-
-
     }
 }

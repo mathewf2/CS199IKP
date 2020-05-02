@@ -227,7 +227,17 @@ fun Application.data() {
                             }
                         }
                         div(classes = "iframeHolder") {
-
+                            p (classes = "description") {
+                                + "This project  was created by Noah Rogers and Mat Farley for University of Illinois' CS 199: IKP (Imperative Kotlin Programming).\n\n"
+                                + "\n"
+                                + "\n"
+                                + "\n The purpose of this project is visualize a collection of data regarding the impacts of COVID-19. We decided to head in in a data science direction as it was an interest for both of us, and because of Kotlin's rise in libraries and compatibilty within the field.\n"
+                                + "\n"
+                                + "\n Ultimately, our goal was to collect data ourselves (via Google Forms, accessed via Google Sheets API), represent that data through Lets-Plot-Kotlin, host it on a KTOR server, utilize coroutines to implement a live updating feature to constantly fetch new survey results, and host it on AWS.\n"
+                                + "\n"
+                                + "\n Noah primarily dealth with the front-end work and the coroutines, while Mat worked on the backend and data collection. Ultimately, our biggest struggles arised from working with some of incompatibility, or lack of documentation, for Kotlin considering it's a new language. Lets Plot, though written in Kotlin natively, is primarily a Python library where not all of the features have been appropriately ported over to support the Kotlin language. Lets Plot does, however, allow for a huge variety of exciting visual representations to play with, which can lead to some powerful graphs (more powerful than ours, surely!)\n"
+                                + "\n The survey and purpose, though many steps were taken to avoid this, are inherently biased towards individuals in a college setting. We spent a lot of time trying to make it as generic and relevant to all populations as much as possible, but we still faulted there in some regard. Both of us are a bit new to the field of data science, so it certainly is not our expertise."
+                            }
                         }
                     }
                     div (classes = "footer") {
@@ -246,9 +256,9 @@ fun main() {
         launch {
             delay(1000)
             while(true) {
-                Data().main()
+                Data().plot()
                 println("ran")
-                delay(1000*60*10)
+                delay(3500)
             }
         }
         launch {
