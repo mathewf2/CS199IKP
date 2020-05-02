@@ -122,13 +122,13 @@ class Data {
             //plotsz = plotsz.plus(lets_plot(generalMap[key]) + geom_bar {
 
 //            }  + ggtitle(title))
-            if (title.length > 100) {
+            if (title.length > 50) {
                 plotsz[plotsz.lastIndex] = plotsz.last() + ggsize(9 * title.length, 300)
             }
         }
 
         val h = 500
-        val w = 500
+        val w = 750
         val bunch = GGBunch()
         for ((count, plot) in plotsz.withIndex()) {
             bunch.addPlot(plot,(count % 3) * w, (count / 3) * h)
