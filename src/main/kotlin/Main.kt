@@ -14,6 +14,23 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.html.*
 
+/* ktlint does not like wildcard imports, here are the necessary imports if we want to run ktlint again.
+ *
+import kotlinx.html.a
+import kotlinx.html.body
+import kotlinx.html.br
+import kotlinx.html.div
+import kotlinx.html.h1
+import kotlinx.html.h4
+import kotlinx.html.head
+import kotlinx.html.iframe
+import kotlinx.html.img
+import kotlinx.html.link
+import kotlinx.html.p
+import kotlinx.html.script
+import kotlinx.html.unsafe
+ */
+
 fun Application.data() {
     install(FreeMarker)
     routing {
