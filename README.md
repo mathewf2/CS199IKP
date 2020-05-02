@@ -1,7 +1,7 @@
 # CS199IKP
 ## COVID - 19 Visualization
 -------------------------
-This project was created by [Noah Rogers](https://github.com/nnrogers515) and [Mat Farley](https://github.com/mathewf2) for University of Illinois' CS 196: IKP (Imperative Kotlin Programming).
+This project was created by [Noah Rogers](https://github.com/nnrogers515) and [Mat Farley](https://github.com/mathewf2) for University of Illinois' CS 199: IKP (Imperative Kotlin Programming).
 
 The purpose of this project is visualize a collection of data regarding the impacts of COVID-19. We decided to head in in a data science direction as it was an interest for both of us, and because of Kotlin's rise in libraries and compatibilty within the field.
 
@@ -31,3 +31,5 @@ In the mean time, you can access our site locally after cloning. The default por
 - [ ] Make the graphs more meaningful & aesthetically pleasing
 
 - [ ] Host on AWS
+
+- [ ] Some documentation wouldn't hurt
