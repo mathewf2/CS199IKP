@@ -9,11 +9,10 @@ import io.ktor.routing.get
 import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
-import kotlinx.coroutines.*
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import kotlinx.html.*
-import java.awt.SystemColor.window
-import java.net.URL
-
 
 fun Application.data() {
     install(FreeMarker)
@@ -62,7 +61,11 @@ fun Application.data() {
                             p(classes = "description") {
                                 +"If you are interested in seeing and/or editing the code for the project, here is a link to our "
 
-                                a(href =  "https://github.com/mathewf2/CS199IKP", target = "_blank", classes = "githubLink") {
+                                a(
+                                    href = "https://github.com/mathewf2/CS199IKP",
+                                    target = "_blank",
+                                    classes = "githubLink"
+                                ) {
                                     +"Public Github"
                                 }
                             }
@@ -87,8 +90,8 @@ fun Application.data() {
                             )
                         }
                     }
-                    div (classes = "footer") {
-                        h4 (classes = "credit") {
+                    div(classes = "footer") {
+                        h4(classes = "credit") {
                             +"A UIUC CS199IKP Project by Mathew Farley and Noah Rogers"
                         }
                     }
@@ -134,8 +137,8 @@ fun Application.data() {
                         }
                     }
 
-                    div (classes = "footer") {
-                        h4 (classes = "credit") {
+                    div(classes = "footer") {
+                        h4(classes = "credit") {
                             +"A UIUC CS199IKP Project by Mathew Farley and Noah Rogers"
                         }
                     }
@@ -170,7 +173,7 @@ fun Application.data() {
                             }
                         }
                         div(classes = "iframeHolder") {
-//                            button() {
+                            //                            button() {
 //                                onClick = "update()"
 //                                +"Update"
 //                            }
@@ -191,8 +194,8 @@ fun Application.data() {
                             )
                         }
                     }
-                    div (classes = "footer") {
-                        h4 (classes = "credit") {
+                    div(classes = "footer") {
+                        h4(classes = "credit") {
                             +"A UIUC CS199IKP Project by Mathew Farley and Noah Rogers"
                         }
                     }
@@ -227,21 +230,21 @@ fun Application.data() {
                             }
                         }
                         div(classes = "iframeHolder") {
-                            p (classes = "description") {
-                                + "This project  was created by Noah Rogers and Mat Farley for University of Illinois' CS 199: IKP (Imperative Kotlin Programming).\n\n"
-                                + "\n"
-                                + "\n"
-                                + "\n The purpose of this project is visualize a collection of data regarding the impacts of COVID-19. We decided to head in in a data science direction as it was an interest for both of us, and because of Kotlin's rise in libraries and compatibilty within the field.\n"
-                                + "\n"
-                                + "\n Ultimately, our goal was to collect data ourselves (via Google Forms, accessed via Google Sheets API), represent that data through Lets-Plot-Kotlin, host it on a KTOR server, utilize coroutines to implement a live updating feature to constantly fetch new survey results, and host it on AWS.\n"
-                                + "\n"
-                                + "\n Noah primarily dealth with the front-end work and the coroutines, while Mat worked on the backend and data collection. Ultimately, our biggest struggles arised from working with some of incompatibility, or lack of documentation, for Kotlin considering it's a new language. Lets Plot, though written in Kotlin natively, is primarily a Python library where not all of the features have been appropriately ported over to support the Kotlin language. Lets Plot does, however, allow for a huge variety of exciting visual representations to play with, which can lead to some powerful graphs (more powerful than ours, surely!)\n"
-                                + "\n The survey and purpose, though many steps were taken to avoid this, are inherently biased towards individuals in a college setting. We spent a lot of time trying to make it as generic and relevant to all populations as much as possible, but we still faulted there in some regard. Both of us are a bit new to the field of data science, so it certainly is not our expertise."
+                            p(classes = "description") {
+                                +"This project  was created by Noah Rogers and Mat Farley for University of Illinois' CS 199: IKP (Imperative Kotlin Programming).\n\n"
+                                +"\n"
+                                +"\n"
+                                +"\n The purpose of this project is visualize a collection of data regarding the impacts of COVID-19. We decided to head in in a data science direction as it was an interest for both of us, and because of Kotlin's rise in libraries and compatibilty within the field.\n"
+                                +"\n"
+                                +"\n Ultimately, our goal was to collect data ourselves (via Google Forms, accessed via Google Sheets API), represent that data through Lets-Plot-Kotlin, host it on a KTOR server, utilize coroutines to implement a live updating feature to constantly fetch new survey results, and host it on AWS.\n"
+                                +"\n"
+                                +"\n Noah primarily dealth with the front-end work and the coroutines, while Mat worked on the backend and data collection. Ultimately, our biggest struggles arised from working with some of incompatibility, or lack of documentation, for Kotlin considering it's a new language. Lets Plot, though written in Kotlin natively, is primarily a Python library where not all of the features have been appropriately ported over to support the Kotlin language. Lets Plot does, however, allow for a huge variety of exciting visual representations to play with, which can lead to some powerful graphs (more powerful than ours, surely!)\n"
+                                +"\n The survey and purpose, though many steps were taken to avoid this, are inherently biased towards individuals in a college setting. We spent a lot of time trying to make it as generic and relevant to all populations as much as possible, but we still faulted there in some regard. Both of us are a bit new to the field of data science, so it certainly is not our expertise."
                             }
                         }
                     }
-                    div (classes = "footer") {
-                        h4 (classes = "credit") {
+                    div(classes = "footer") {
+                        h4(classes = "credit") {
                             +"A UIUC CS199IKP Project by Mathew Farley and Noah Rogers"
                         }
                     }
@@ -255,7 +258,7 @@ fun main() {
     runBlocking {
         launch {
             delay(1000)
-            while(true) {
+            while (true) {
                 Data.plot()
                 println("ran")
                 delay(3500)

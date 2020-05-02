@@ -26,31 +26,30 @@ dependencies {
     implementation("io.ktor:ktor-html-builder:$ktorVersion")
 
     val kotlinx_html_version = "0.7.1"
-    //Server Side
-    implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:${kotlinx_html_version}")
-    //Client Side
-    implementation("org.jetbrains.kotlinx:kotlinx-html-js:${kotlinx_html_version}")
+    // Server Side
+    implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:$kotlinx_html_version")
+    // Client Side
+    implementation("org.jetbrains.kotlinx:kotlinx-html-js:$kotlinx_html_version")
 
     testImplementation("io.kotlintest:kotlintest-runner-junit5:3.3.0")
     testImplementation("io.ktor:ktor-server-test-host:$ktorVersion")
     testImplementation("org.slf4j:slf4j-simple:1.7.26")
 
     val kmathVersion = "0.1.3"
-    api("scientifik:kmath-core:${kmathVersion}")
+    api("scientifik:kmath-core:$kmathVersion")
 
     val knumpyVersion = "0.1.4"
-    implementation("org.jetbrains:kotlin-numpy:${knumpyVersion}")
+    implementation("org.jetbrains:kotlin-numpy:$knumpyVersion")
 
     val letsPlotVersion = "0.0.9-SNAPSHOT"
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.lets-plot:lets-plot-common:1.3.1")
-    api("org.jetbrains.lets-plot:lets-plot-kotlin-api:${letsPlotVersion}")
+    api("org.jetbrains.lets-plot:lets-plot-kotlin-api:$letsPlotVersion")
 
     implementation("com.google.api-client:google-api-client:1.30.4")
     implementation("com.google.oauth-client:google-oauth-client-jetty:1.30.4")
     implementation("com.google.apis:google-api-services-sheets:v4-rev581-1.25.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.4")
-
 }
 
 tasks {
