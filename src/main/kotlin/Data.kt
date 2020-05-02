@@ -139,9 +139,7 @@ class Data {
             println("saved to file")
             // Saves the bunch to an iframe; html and svg are options as well
             val iframe = PlotHtmlExport.buildHtmlFromRawSpecs(bunch.toSpec(), iFrame = true)
-            val file = File("")
-            println(file.absolutePath)
-            File("KotlinDataScience/src/main/static/iframetest.html").writeText(iframe)
+            File("build/resources/main/static/iframetest.html").writeText(iframe)
         }
     }
 }
