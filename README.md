@@ -15,6 +15,8 @@ This README will be updated with appropriate instructions to access the site, ho
 
 In the mean time, you can access our site locally after cloning. The default port is 8080.
 
+Upon first time running, you will need to accept permissions through a Google account. Afterwards, this information will be saved in tokens/StoredCredential.
+
 
 ### TODO:
 
