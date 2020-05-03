@@ -1,9 +1,6 @@
-package KotlinDataScience
 
 import io.ktor.application.Application
 import io.ktor.application.call
-import io.ktor.application.install
-import io.ktor.freemarker.FreeMarker
 import io.ktor.html.respondHtml
 import io.ktor.http.content.resources
 import io.ktor.http.content.static
@@ -11,27 +8,10 @@ import io.ktor.routing.get
 import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
-import java.io.File
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.html.*
-
-/* ktlint does not like wildcard imports, here are the necessary imports if we want to run ktlint again.
-import kotlinx.html.a
-import kotlinx.html.body
-import kotlinx.html.br
-import kotlinx.html.div
-import kotlinx.html.h1
-import kotlinx.html.h4
-import kotlinx.html.head
-import kotlinx.html.iframe
-import kotlinx.html.img
-import kotlinx.html.link
-import kotlinx.html.p
-import kotlinx.html.script
-import kotlinx.html.unsafe
- */
 
 fun Application.data() {
     routing {
@@ -251,14 +231,14 @@ fun Application.data() {
                                 This project was created by Noah Rogers and Mat Farley for the University of Illinois's CS 199: IKP (Imperative Kotlin Programming) Class.
                                 The purpose of this project was to visualize a collection of data regarding the impacts of COVID-19. Our shift in focus to data science was mainly due to personal interests, data science's importance to society, and also, due to Kotlin's rise in libraries and compatibility within the field.
                                 """
-                                br {  }
-                                br {  }
+                                br { }
+                                br { }
                                 +"""
                                 Ultimately, our goal was to collect data ourselves (via Google Forms, accessed via Google Sheets API), represent that data through Lets-Plot-Kotlin, host it on a KTOR server, utilize coroutines to implement a live updating feature to constantly fetch new survey results, and host it on AWS.
                                 Noah primarily dealt with the front-end work and the coroutines, while Mat worked on the backend and data collection. Ultimately, our biggest struggles arose from working with compatibility issues and lack of documentation in some of our Kotlin libraries. Understandable considering it's a new language.
                                 """
-                                br {  }
-                                br {  }
+                                br { }
+                                br { }
                                 +"""Lets Plot, though written in Kotlin natively, is primarily a Python library where not all of the features have been appropriately ported over to support the Kotlin language. Lets Plot does, however, allow for a huge variety of exciting visual representations to play with, which can lead to some powerful graphs (more powerful than ours, surely!)
                                 The survey and purpose, though many steps were taken to avoid this, are inherently biased towards individuals in a college setting. We spent a lot of time trying to make it as generic and relevant to all populations as much as possible, but we still faulted there in some regard. Both of us are a bit new to the field of data science, so it certainly is not our expertise.
                                 """
@@ -282,22 +262,19 @@ fun main() {
             delay(1000)
             while (true) {
                 Data.plot()
-                println("ran")
                 delay(3500)
             }
         }
         launch {
-            println("test")
-            val src = File("src/main/resources/static/iframetest.html")
-            if (src.exists()) {
-                embeddedServer(
-                    Netty,
-                    watchPaths = listOf("KotlinDataScience", "/IdeaProjects/KotlinDataScience", "/IdeaProjects/KotlinDataScience/src/main/resources/static/",
-                                        "/KotlinDataScience/src/main/kotlin/"),
-                    port = 8080,
-                    module = Application::data
-                ).start()
-            }
+            println("Running")
+            println("Main " + System.getProperty("user.dir"))
+            embeddedServer(
+                Netty,
+                watchPaths = listOf("KotlinDataScience", "/IdeaProjects/KotlinDataScience", "/IdeaProjects/KotlinDataScience/src/main/resources/static/",
+                                    "/KotlinDataScience/src/main/kotlin/", "KotlinDataScience/src/main/resources", "KotlinDataScience/build/resources/main/static/iframetest.html"),
+                port = 8080,
+                module = Application::data
+            ).start()
         }
     }
 }

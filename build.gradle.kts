@@ -2,7 +2,9 @@ plugins {
     kotlin("jvm") version "1.3.71"
     id("org.jlleitschuh.gradle.ktlint") version "9.2.1"
     id("com.github.johnrengelman.shadow") version "5.2.0"
+    war
 }
+
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
@@ -50,6 +52,10 @@ dependencies {
     implementation("com.google.oauth-client:google-oauth-client-jetty:1.30.4")
     implementation("com.google.apis:google-api-services-sheets:v4-rev581-1.25.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.4")
+
+    providedCompile("javax.servlet:javax.servlet-api:3.1.0")
+//    testCompile("junit:junit:4.12")
+
 }
 
 tasks {
